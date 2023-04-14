@@ -49,8 +49,8 @@ picture img {
 picture:before { 
     content: "";
     position: absolute;
-    inset: -25em 1em;
-    background-color: #0363f4;
+    inset: -25em 1.5em;
+    background-color: #03a9f4;
     width: 25em;
     height: 25em;
     border-radius: 50%;
@@ -63,7 +63,8 @@ picture:after {
     inset: -3.5em 0.5em;
     height: 80px;
     width: 80px;
-    border: 2px solid #03a9f4;
+    color: #fff;
+    background-color: #03a9f4;
     border-radius: 50%;
 }
 
