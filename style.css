@@ -140,3 +140,19 @@ button:before {
     transform-origin: right;
     transition: transform 0.3s ease;
 }
+
+.animate-out {
+    animation: animate-out 0.5s forwards;
+  }
+  
+  @keyframes animate-out {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+  

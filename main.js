@@ -1,4 +1,8 @@
-let array = [{
+const main = document.querySelector("main");
+
+const fragment = document.createElement("fragment")
+
+const reviews = [{
     name: 'Carlos Sebastian Lorenzo',
     img: 'https://unavatar.io/github/CarlosSebastianLorenzo',
     job: 'Full-stack Web Developer',
@@ -23,3 +27,42 @@ let array = [{
     comment: "Hi, I'm Joaco. I'm a responsible person interested in starting to develop professionally as a developer to apply all the knowledge acquired in recent years. I'm capable of addressing client requirements, analyzing them, working in a team, and carrying out their development in a timely manner, complying with the best market practices and under agile methodologies."
 }]
 
+function renderReviewer(reviewer) {
+    main.innerHTML = ""
+    fragment.innerHTML =
+        `
+        <section>
+            <picture>
+                <img class="img" src="${reviewer.img}" alt="${reviewer.name}">
+            </picture>
+            <h3>${reviewer.name}</h3>
+            <h4>${reviewer.job}</h4>
+            <p>${reviewer.comment}</p>
+            <div>
+                <i onclick="prev()" class="fa-solid fa-chevron-left"></i>
+                <i onclick="next()" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <button onclick="random()">Surprise Me</button>
+        </section>
+    `
+    main.appendChild(fragment);
+}
+
+renderReviewer(reviews[0]);
+
+let i = 0;
+
+function prev() {
+    i > 0 ? i-- : i = reviews.length - 1;
+    renderReviewer(reviews[i]);
+}
+
+function next() {
+    i < reviews.length - 1 ? i++ : i = 0;
+    renderReviewer(reviews[i]);
+}
+
+function random() {
+    i = Math.floor(Math.random() * reviews.length);
+    renderReviewer(reviews[i]);
+}
