@@ -28,8 +28,6 @@ const reviews = [
     }
 ];
 
-let i = 0;
-
 function renderReviewer(reviewer) {
     main.innerHTML = "";
     fragment.innerHTML = `
@@ -49,6 +47,8 @@ function renderReviewer(reviewer) {
     `;
     main.appendChild(fragment);
 }
+
+let i = 0;
 
 function prev() {
     i > 0 ? i-- : i = reviews.length - 1;
