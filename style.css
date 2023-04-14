@@ -1,0 +1,141 @@
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    background-color: #03a9f4;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+section {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+}
+
+picture {
+    position: relative;
+}
+
+picture img {
+    position: relative;
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* Suele usarse para parte adelante, aunque debería funcionar de ambas formas */
+picture:before { 
+    content: "";
+    position: absolute;
+    inset: -25em 1em;
+    background-color: #0363f4;
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+}
+
+picture:after {
+    content: "''";
+    position: absolute;
+    font-size: 100px;
+    inset: -3.5em 0.5em;
+    height: 80px;
+    width: 80px;
+    border: 2px solid #03a9f4;
+    border-radius: 50%;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+
+p {
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-solid.fa-chevron-left,
+.fa-solid.fa-chevron-right {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #03a9f4;
+    cursor: pointer;
+}
+
+.fa-solid.fa-chevron-left:hover {
+    color: #0363f4;
+}
+
+.fa-solid.fa-chevron-right:hover {
+    color: #0363f4;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    border: 2px solid #03a9f4;
+    border-radius: 5px;
+    color: #03a9f4;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #03a9f4;
+    color: #fff;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #03a9f4;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
